@@ -1,0 +1,53 @@
+image: node:19.2.0
+
+stages:
+  - install
+  # - audit
+  # - test
+  - build
+
+variables:
+  GIT_STRATEGY: clone
+  GIT_DEPTH: "0"  # Tells git to fetch all the branches of the project, required by the analysis task
+
+install:
+  stage: install
+  script:
+    - npm install
+  artifacts:
+    name: "artifacts"
+    untracked: true
+    expire_in: 60 mins
+    paths:
+      - .npm/
+      - node_modules/
+
+# audit:
+#   stage: audit
+#   script:
+#     - npm --proxy=http://proxy.intra.bca.co.id:8080 audit
+#   allow_failure: false
+
+# test:
+#   stage: test
+#   script:
+#     - npm run test:ci
+#   artifacts:
+#     paths:
+#       - coverage
+#     expire_in: 30 days
+
+build:
+  stage: build
+  except:
+    refs:
+      - STAGING
+  script:
+    - export CI=false
+    - npm run build
+  artifacts:
+    paths:
+      - build
+    expire_in: 15 mins
+  dependencies:
+    - install
