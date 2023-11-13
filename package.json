@@ -33,7 +33,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "gcp-build": "next build",
     "start": "next start -p 8080",
     "export": "next export",
     "lint": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
