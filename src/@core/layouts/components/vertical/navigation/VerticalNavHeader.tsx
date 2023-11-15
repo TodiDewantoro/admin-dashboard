@@ -48,6 +48,14 @@ const StyledLink = styled('a')({
   textDecoration: 'none'
 })
 
+// Styled component for the logo
+const LogoIMG = styled('img')({
+  right: 36,
+  top: 20,
+  height: 40,
+  position: 'absolute'
+})
+
 const VerticalNavHeader = (props: Props) => {
   // ** Props
   const { verticalNavMenuBranding: userVerticalNavMenuBranding } = props
@@ -121,9 +129,14 @@ const VerticalNavHeader = (props: Props) => {
                 </g>
               </g>
             </svg> */}
-            <HeaderTitle variant='h6' sx={{ ml: 3 }}>
-              {themeConfig.templateName}
-            </HeaderTitle>
+            {
+              themeConfig.templateLogo ?
+                <LogoIMG alt='logo' src={themeConfig.templateLogo} />
+                :
+                <HeaderTitle variant='h6' sx={{ ml: 3 }}>
+                  {themeConfig.templateName}asd
+                </HeaderTitle>
+            }
           </StyledLink>
         </Link>
       )}

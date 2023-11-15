@@ -26,6 +26,16 @@ const navigation = (): VerticalNavItemsType => {
       path: '/account-settings'
     },
     {
+      title: 'Knowledge Management',
+      icon: AlertCircleOutline,
+      path: '/knowledge-management',
+    },
+    {
+      title: 'Database Management',
+      icon: AlertCircleOutline,
+      path: '/database-management',
+    },
+    {
       sectionTitle: 'Pages'
     },
     {
@@ -46,34 +56,34 @@ const navigation = (): VerticalNavItemsType => {
       path: '/pages/error',
       openInNewTab: true
     },
-    {
-      sectionTitle: 'User Interface'
-    },
-    {
-      title: 'Typography',
-      icon: FormatLetterCase,
-      path: '/typography'
-    },
-    {
-      title: 'Icons',
-      path: '/icons',
-      icon: GoogleCirclesExtended
-    },
-    {
-      title: 'Cards',
-      icon: CreditCardOutline,
-      path: '/cards'
-    },
-    {
-      title: 'Tables',
-      icon: Table,
-      path: '/tables'
-    },
-    {
-      icon: CubeOutline,
-      title: 'Form Layouts',
-      path: '/form-layouts'
-    }
+    // {
+    //   sectionTitle: 'UI components'
+    // },
+    // {
+    //   title: 'Typography',
+    //   icon: FormatLetterCase,
+    //   path: '/typography'
+    // },
+    // {
+    //   title: 'Icons',
+    //   path: '/icons',
+    //   icon: GoogleCirclesExtended
+    // },
+    // {
+    //   title: 'Cards',
+    //   icon: CreditCardOutline,
+    //   path: '/cards'
+    // },
+    // {
+    //   title: 'Tables',
+    //   icon: Table,
+    //   path: '/tables'
+    // },
+    // {
+    //   icon: CubeOutline,
+    //   title: 'Form Layouts',
+    //   path: '/form-layouts'
+    // }
   ]
 }
 

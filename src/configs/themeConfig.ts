@@ -7,6 +7,7 @@ import { ContentWidth } from 'src/@core/layouts/types'
 type ThemeConfig = {
   mode: PaletteMode
   templateName: string
+  templateLogo?: any
   routingLoader: boolean
   disableRipple: boolean
   navigationSize: number
@@ -17,7 +18,8 @@ type ThemeConfig = {
 
 const themeConfig: ThemeConfig = {
   // ** Layout Configs
-  templateName: 'Dashboard' /* App Name */,
+  templateName: 'MEL System Dashboard' /* App Name */,
+  templateLogo: '/images/misc/viriyaenb-logo.png',
   mode: 'light' /* light | dark */,
   contentWidth: 'boxed' /* full | boxed */,
 
