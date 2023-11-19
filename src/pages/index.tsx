@@ -42,44 +42,44 @@ const Dashboard = () => {
           <Grid container spacing={6}>
             <Grid item xs={6}>
               <CardStatisticsVerticalComponent
-                stats='$25.6k'
+                stats='25.6ha'
                 icon={<Poll />}
                 color='success'
                 trendNumber='+42%'
-                title='Total Profit'
-                subtitle='Weekly Profit'
+                title='Landscape under improved practices'
+                subtitle='Last Year'
               />
             </Grid>
             <Grid item xs={6}>
               <CardStatisticsVerticalComponent
-                stats='$78'
-                title='Refunds'
+                stats='1.000ha'
+                title='Total social forestry concessions'
                 trend='negative'
                 color='secondary'
                 trendNumber='-15%'
-                subtitle='Past Month'
-                icon={<CurrencyUsd />}
+                subtitle='Last Year'
+                icon={<HelpCircleOutline />}
               />
             </Grid>
             <Grid item xs={6}>
               <CardStatisticsVerticalComponent
-                stats='862'
+                stats='100.000ha'
                 trend='negative'
                 trendNumber='-18%'
-                title='New Project'
-                subtitle='Yearly Project'
+                title='Agroforestry on social forestry concessions '
+                subtitle='Last Quarter'
                 icon={<BriefcaseVariantOutline />}
               />
             </Grid>
             <Grid item xs={6}>
               <CardStatisticsVerticalComponent
-                stats='15'
+                stats='15.000ha'
                 color='warning'
                 trend='negative'
                 trendNumber='-18%'
-                subtitle='Last Week'
-                title='Sales Queries'
-                icon={<HelpCircleOutline />}
+                subtitle='Last Year'
+                title='Area-based protection of key species habitat'
+                icon={<CurrencyUsd />}
               />
             </Grid>
           </Grid>

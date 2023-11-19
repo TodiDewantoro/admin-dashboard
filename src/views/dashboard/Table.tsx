@@ -14,13 +14,13 @@ import TableContainer from '@mui/material/TableContainer'
 import { ThemeColor } from 'src/@core/layouts/types'
 
 interface RowType {
-  age: number
-  name: string
-  date: string
-  email: string
-  salary: string
+  duration: number
+  projectPartner: string
+  dateOfAwarded: string
+  projectTitle: string
+  totalBudget: string
   status: string
-  designation: string
+  board: string
 }
 
 interface StatusObj {
@@ -31,85 +31,40 @@ interface StatusObj {
 
 const rows: RowType[] = [
   {
-    age: 27,
-    status: 'current',
-    date: '09/27/2018',
-    name: 'Sally Quinn',
-    salary: '$19586.23',
-    email: 'eebsworth2m@sbwire.com',
-    designation: 'Human Resources Assistant'
+    duration: 27,
+    status: 'delayed',
+    dateOfAwarded: '09/27/2018',
+    projectPartner: 'ABC org.',
+    totalBudget: '$19586.23',
+    projectTitle: 'Project Title A',
+    board: 'Yogyakarta Board'
   },
   {
-    age: 61,
-    date: '09/23/2016',
-    salary: '$23896.35',
-    status: 'professional',
-    name: 'Margaret Bowers',
-    email: 'kocrevy0@thetimes.co.uk',
-    designation: 'Nuclear Power Engineer'
+    duration: 12,
+    status: 'onProgress',
+    dateOfAwarded: '09/27/2018',
+    projectPartner: 'ASDASD org.',
+    totalBudget: '$1956.23',
+    projectTitle: 'Project Title B',
+    board: 'Jakarta Board'
   },
   {
-    age: 59,
-    date: '10/15/2017',
-    name: 'Minnie Roy',
-    status: 'rejected',
-    salary: '$18991.67',
-    email: 'ediehn6@163.com',
-    designation: 'Environmental Specialist'
+    duration: 27,
+    status: 'ended',
+    dateOfAwarded: '09/27/2018',
+    projectPartner: 'XYZ org.',
+    totalBudget: '$9586.23',
+    projectTitle: 'Project Title C',
+    board: 'Surabaya Board'
   },
-  {
-    age: 30,
-    date: '06/12/2018',
-    status: 'resigned',
-    salary: '$19252.12',
-    name: 'Ralph Leonard',
-    email: 'dfalloona@ifeng.com',
-    designation: 'Sales Representative'
-  },
-  {
-    age: 66,
-    status: 'applied',
-    date: '03/24/2018',
-    salary: '$13076.28',
-    name: 'Annie Martin',
-    designation: 'Operator',
-    email: 'sganderton2@tuttocitta.it'
-  },
-  {
-    age: 33,
-    date: '08/25/2017',
-    salary: '$10909.52',
-    name: 'Adeline Day',
-    status: 'professional',
-    email: 'hnisius4@gnu.org',
-    designation: 'Senior Cost Accountant'
-  },
-  {
-    age: 61,
-    status: 'current',
-    date: '06/01/2017',
-    salary: '$17803.80',
-    name: 'Lora Jackson',
-    designation: 'Geologist',
-    email: 'ghoneywood5@narod.ru'
-  },
-  {
-    age: 22,
-    date: '12/03/2017',
-    salary: '$12336.17',
-    name: 'Rodney Sharp',
-    status: 'professional',
-    designation: 'Cost Accountant',
-    email: 'dcrossman3@google.co.jp'
-  }
 ]
 
 const statusObj: StatusObj = {
-  applied: { color: 'info' },
-  rejected: { color: 'error' },
-  current: { color: 'primary' },
-  resigned: { color: 'warning' },
-  professional: { color: 'success' }
+  info: { color: 'info' },
+  error: { color: 'error' },
+  onProgress: { color: 'primary' },
+  delayed: { color: 'warning' },
+  ended: { color: 'success' }
 }
 
 const DashboardTable = () => {
@@ -119,27 +74,27 @@ const DashboardTable = () => {
         <Table sx={{ minWidth: 800 }} aria-label='table in dashboard'>
           <TableHead>
             <TableRow>
-              <TableCell>Name</TableCell>
-              <TableCell>Email</TableCell>
-              <TableCell>Date</TableCell>
-              <TableCell>Salary</TableCell>
-              <TableCell>Age</TableCell>
+              <TableCell>Project Partner</TableCell>
+              <TableCell>Project Title</TableCell>
+              <TableCell>Date of Awarded</TableCell>
+              <TableCell>Total Budget</TableCell>
+              <TableCell>Duration (months)</TableCell>
               <TableCell>Status</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {rows.map((row: RowType) => (
-              <TableRow hover key={row.name} sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
+              <TableRow hover key={row.projectPartner} sx={{ '&:last-of-type td, &:last-of-type th': { border: 0 } }}>
                 <TableCell sx={{ py: theme => `${theme.spacing(0.5)} !important` }}>
                   <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                    <Typography sx={{ fontWeight: 500, fontSize: '0.875rem !important' }}>{row.name}</Typography>
-                    <Typography variant='caption'>{row.designation}</Typography>
+                    <Typography sx={{ fontWeight: 500, fontSize: '0.875rem !important' }}>{row.projectPartner}</Typography>
+                    <Typography variant='caption'>{row.board}</Typography>
                   </Box>
                 </TableCell>
-                <TableCell>{row.email}</TableCell>
-                <TableCell>{row.date}</TableCell>
-                <TableCell>{row.salary}</TableCell>
-                <TableCell>{row.age}</TableCell>
+                <TableCell>{row.projectTitle}</TableCell>
+                <TableCell>{row.dateOfAwarded}</TableCell>
+                <TableCell>{row.totalBudget}</TableCell>
+                <TableCell>{row.duration}</TableCell>
                 <TableCell>
                   <Chip
                     label={row.status}

@@ -36,7 +36,7 @@ const navigation = (): VerticalNavItemsType => {
       path: '/database-management',
     },
     {
-      sectionTitle: 'Pages'
+      sectionTitle: 'Miscellaneous User Flow Pages'
     },
     {
       title: 'Login',

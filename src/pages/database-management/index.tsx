@@ -38,6 +38,9 @@ const DatabaseManagement = () => {
         <BoxWrapper>
           <Typography variant='h4'>Database Management</Typography>
         </BoxWrapper>
+        <BoxWrapper>
+          <Typography variant='h6'>To be develop</Typography>
+        </BoxWrapper>
         <Img height='410' alt='error-illustration' src='/images/pages/401.png' />
         <Link passHref href='/'>
           <Button component='a' variant='contained' sx={{ px: 5.5 }}>

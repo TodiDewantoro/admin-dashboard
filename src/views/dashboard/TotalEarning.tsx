@@ -29,28 +29,28 @@ const data: DataType[] = [
   {
     progress: 75,
     imgHeight: 20,
-    title: 'Zipcar',
+    title: 'ABC org.',
     color: 'primary',
     amount: '$24,895.65',
-    subtitle: 'Vuejs, React & HTML',
+    subtitle: 'Species conservation',
     imgSrc: '/images/cards/logo-zipcar.png'
   },
   {
     progress: 50,
     color: 'info',
     imgHeight: 27,
-    title: 'Bitbank',
+    title: 'Bee Forestry org.',
     amount: '$8,650.20',
-    subtitle: 'Sketch, Figma & XD',
+    subtitle: 'Forest Protection',
     imgSrc: '/images/cards/logo-bitbank.png'
   },
   {
     progress: 20,
     imgHeight: 20,
-    title: 'Aviato',
+    title: 'Aviato org.',
     color: 'secondary',
     amount: '$1,245.80',
-    subtitle: 'HTML & Angular',
+    subtitle: 'Public, Private, Partnerships (PPPP) practices.',
     imgSrc: '/images/cards/logo-aviato.png'
   }
 ]
@@ -59,7 +59,7 @@ const TotalEarning = () => {
   return (
     <Card>
       <CardHeader
-        title='Total Earning'
+        title='Institutions Expenses'
         titleTypographyProps={{ sx: { lineHeight: '1.6 !important', letterSpacing: '0.15px !important' } }}
         action={
           <IconButton size='small' aria-label='settings' className='card-more-options' sx={{ color: 'text.secondary' }}>

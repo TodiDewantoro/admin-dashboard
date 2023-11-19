@@ -14,7 +14,7 @@ const FooterContent = () => {
       <Typography sx={{ mr: 2 }}>
         {`© ${new Date().getFullYear()}, Made by `}
         <Link target='_blank' href='https://sudutkolase.id/'>
-          Sudutkolase.id
+          SiMonep
         </Link>
       </Typography>
       {hidden ? null : (

@@ -20,41 +20,41 @@ const depositData = [
   {
     logoWidth: 28,
     logoHeight: 29,
-    amount: '+$4,650',
-    subtitle: 'Sell UI Kit',
-    title: 'Gumroad Account',
+    amount: '46,5%',
+    subtitle: 'Subtitle A',
+    title: 'Business A',
     logo: '/images/logos/gumroad.png'
   },
   {
     logoWidth: 38,
     logoHeight: 38,
-    amount: '+$92,705',
-    title: 'Mastercard',
-    subtitle: 'Wallet deposit',
+    amount: '92,7%',
+    title: 'Business B',
+    subtitle: 'Subtitle B',
     logo: '/images/logos/mastercard-label.png'
   },
   {
     logoWidth: 20,
     logoHeight: 28,
-    amount: '+$957',
-    title: 'Stripe Account',
-    subtitle: 'iOS Application',
+    amount: '95.7%',
+    title: 'Business C',
+    subtitle: 'Subtitle C',
     logo: '/images/logos/stripe.png'
   },
   {
     logoWidth: 34,
     logoHeight: 32,
-    amount: '+$6,837',
-    title: 'American Bank',
-    subtitle: 'Bank Transfer',
+    amount: '6,8%',
+    title: 'Business D',
+    subtitle: 'Subtitle D',
     logo: '/images/logos/american-bank.png'
   },
   {
     logoWidth: 33,
     logoHeight: 22,
-    amount: '+$446',
-    title: 'Bank Account',
-    subtitle: 'Wallet deposit',
+    amount: '44.6%',
+    title: 'Business E',
+    subtitle: 'Subtitle E',
     logo: '/images/logos/citi-bank.png'
   }
 ]
@@ -118,7 +118,7 @@ const DepositWithdraw = () => {
     <Card sx={{ display: 'flex', justifyContent: 'space-between', flexDirection: ['column', 'column', 'row'] }}>
       <Box sx={{ width: '100%' }}>
         <CardHeader
-          title='Deposit'
+          title='Biodiversity-friendly businesses capitalization'
           sx={{ pt: 5.5, alignItems: 'center', '& .MuiCardHeader-action': { mt: 0.6 } }}
           action={<Typography variant='caption'>View All</Typography>}
           titleTypographyProps={{
@@ -164,7 +164,7 @@ const DepositWithdraw = () => {
 
       <Box sx={{ width: '100%' }}>
         <CardHeader
-          title='Withdraw'
+          title='Donors'
           sx={{ pt: 5.5, alignItems: 'center', '& .MuiCardHeader-action': { mt: 0.6 } }}
           action={<Typography variant='caption'>View All</Typography>}
           titleTypographyProps={{

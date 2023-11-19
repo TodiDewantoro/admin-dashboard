@@ -38,6 +38,9 @@ const KnowledgeManagement = () => {
         <BoxWrapper>
           <Typography variant='h4'>Knowledge Management</Typography>
         </BoxWrapper>
+        <BoxWrapper>
+          <Typography variant='h6'>To be develop</Typography>
+        </BoxWrapper>
         <Img height='430' alt='error-illustration' src='/images/pages/401.png' />
         <Link passHref href='/'>
           <Button component='a' variant='contained' sx={{ px: 5.5 }}>
