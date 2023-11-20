@@ -12,6 +12,7 @@ import GoogleCirclesExtended from 'mdi-material-ui/GoogleCirclesExtended'
 
 // ** Type import
 import { VerticalNavItemsType } from 'src/@core/layouts/types'
+import { Bookshelf, Database } from 'mdi-material-ui'
 
 const navigation = (): VerticalNavItemsType => {
   return [
@@ -27,35 +28,35 @@ const navigation = (): VerticalNavItemsType => {
     },
     {
       title: 'Knowledge Management',
-      icon: AlertCircleOutline,
+      icon: Bookshelf,
       path: '/knowledge-management',
     },
     {
       title: 'Database Management',
-      icon: AlertCircleOutline,
+      icon: Database,
       path: '/database-management',
     },
-    {
-      sectionTitle: 'Miscellaneous User Flow Pages'
-    },
-    {
-      title: 'Login',
-      icon: Login,
-      path: '/pages/login',
-      openInNewTab: true
-    },
-    {
-      title: 'Register',
-      icon: AccountPlusOutline,
-      path: '/pages/register',
-      openInNewTab: true
-    },
-    {
-      title: 'Error',
-      icon: AlertCircleOutline,
-      path: '/pages/error',
-      openInNewTab: true
-    },
+    // {
+    //   sectionTitle: 'Miscellaneous User Flow Pages'
+    // },
+    // {
+    //   title: 'Login',
+    //   icon: Login,
+    //   path: '/pages/login',
+    //   openInNewTab: true
+    // },
+    // {
+    //   title: 'Register',
+    //   icon: AccountPlusOutline,
+    //   path: '/pages/register',
+    //   openInNewTab: true
+    // },
+    // {
+    //   title: 'Error',
+    //   icon: AlertCircleOutline,
+    //   path: '/pages/error',
+    //   openInNewTab: true
+    // },
     // {
     //   sectionTitle: 'UI components'
     // },

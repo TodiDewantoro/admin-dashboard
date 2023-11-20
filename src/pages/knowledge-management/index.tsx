@@ -1,55 +1,92 @@
-// ** Next Import
-import Link from 'next/link'
-
-// ** MUI Components
+// ** MUI Imports
+import Grid from '@mui/material/Grid'
+import Card from '@mui/material/Card'
 import Button from '@mui/material/Button'
-import { styled } from '@mui/material/styles'
 import Typography from '@mui/material/Typography'
-import Box, { BoxProps } from '@mui/material/Box'
+import CardContent from '@mui/material/CardContent'
+import { styled, useTheme } from '@mui/material/styles'
+import ApexChartWrapper from 'src/@core/styles/libs/react-apexcharts'
 
-// ** Demo Imports
-import FooterIllustrations from 'src/views/pages/misc/FooterIllustrations'
-
-// ** Styled Components
-const BoxWrapper = styled(Box)<BoxProps>(({ theme }) => ({
-  [theme.breakpoints.down('md')]: {
-    width: '90vw'
-  }
-}))
-
-const Img = styled('img')(({ theme }) => ({
-  marginBottom: theme.spacing(10),
-  [theme.breakpoints.down('lg')]: {
-    height: 450,
-    marginTop: theme.spacing(10)
-  },
-  [theme.breakpoints.down('md')]: {
-    height: 400
-  },
-  [theme.breakpoints.up('lg')]: {
-    marginTop: theme.spacing(13)
-  }
-}))
+// Styled component for the triangle shaped background image
+const TriangleImg = styled('img')({
+  right: 0,
+  bottom: 0,
+  height: 170,
+  position: 'absolute'
+})
 
 const KnowledgeManagement = () => {
+  const theme = useTheme()
+  const imageSrc = theme.palette.mode === 'light' ? 'triangle-light.png' : 'triangle-dark.png'
   return (
-    <Box className='content-center'>
-      <Box sx={{ p: 5, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-        <BoxWrapper>
-          <Typography variant='h4'>Knowledge Management</Typography>
-        </BoxWrapper>
-        <BoxWrapper>
-          <Typography variant='h6'>To be develop</Typography>
-        </BoxWrapper>
-        <Img height='430' alt='error-illustration' src='/images/pages/401.png' />
-        <Link passHref href='/'>
-          <Button component='a' variant='contained' sx={{ px: 5.5 }}>
-            Back to Home
-          </Button>
-        </Link>
-      </Box>
-      <FooterIllustrations />
-    </Box>
+    <>
+      <ApexChartWrapper>
+        <Grid container spacing={6}>
+          <Grid item xs={12} md={6}>
+            <Card sx={{ position: 'relative' }}>
+              <CardContent>
+                <Typography variant='h6'>Conservation management & land degradation</Typography>
+                <br/>
+                <Typography>
+                The overarching goal would be to promote sustainable practices that protect and enhance ecosystems, biodiversity, and natural resources while mitigating the negative impacts of human activities on the environment.
+                </Typography>
+                <br/>
+                <Button size='small' variant='contained'>
+                  View Details
+                </Button>
+                <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Card sx={{ position: 'relative' }}>
+              <CardContent>
+                <Typography variant='h6'>Protection of biodiversity</Typography>
+                <br/>
+                <Typography>
+                The overarching goal of your programs would likely be to conserve and sustainably manage the Earth's diverse ecosystems and the species that inhabit them. This goal can be achieved through a variety of targeted initiatives and projects aimed at addressing specific challenges related to biodiversity conservation.
+                </Typography>
+                <br/>
+                <Button size='small' variant='contained'>
+                  View Details
+                </Button>
+                <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Card sx={{ position: 'relative' }}>
+              <CardContent>
+                <Typography variant='h6'>Public and private investment</Typography>
+                <br/>
+                <Typography>
+                Overseeing public and private investment programs, the overarching goal is to allocate resources strategically to address societal needs, foster economic development, and promote positive outcomes for communities.
+                </Typography>
+                <br/>
+                <Button size='small' variant='contained'>
+                  View Details
+                </Button>
+                <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Card sx={{ position: 'relative' }}>
+              <CardContent>
+                <Typography variant='h6'>No carbon development</Typography>
+                <br />
+                <Typography>The primary goal would be to support initiatives and projects that contribute to the reduction or elimination of carbon emissions while promoting sustainable and environmentally friendly alternatives. The overarching objective is to address climate change and its associated impacts by fostering the transition to a low-carbon or carbon-neutral economy.</Typography>
+                <br/>
+                <Button size='small' variant='contained'>
+                  View Details
+                </Button>
+                <TriangleImg alt='triangle background' src={`/images/misc/${imageSrc}`} />
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </ApexChartWrapper>
+    </>
   )
 }
 

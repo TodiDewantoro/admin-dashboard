@@ -50,7 +50,7 @@ const salesData: DataType[] = [
   {
     stats: '88%',
     color: 'info',
-    title: 'Economic Return',
+    title: 'Economic Return Rate',
     icon: <CurrencyUsd sx={{ fontSize: '1.75rem' }} />
   }
 ]
