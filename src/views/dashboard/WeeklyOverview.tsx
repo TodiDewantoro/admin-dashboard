@@ -16,6 +16,7 @@ import { ApexOptions } from 'apexcharts'
 
 // ** Custom Components Imports
 import ReactApexcharts from 'src/@core/components/react-apexcharts'
+import Link from 'next/link'
 
 const WeeklyOverview = () => {
   // ** Hook
@@ -104,9 +105,11 @@ const WeeklyOverview = () => {
           </Typography>
           <Typography variant='body2'>Projects expenses is 45% bigger compared to last year</Typography>
         </Box>
-        <Button fullWidth variant='contained'>
-          Details
-        </Button>
+        <Link passHref href='/pages/knowledge-management-topic'>
+          <Button fullWidth variant='contained'>
+            Details
+          </Button>
+        </Link>
       </CardContent>
     </Card>
   )

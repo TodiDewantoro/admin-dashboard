@@ -64,41 +64,41 @@ const withdrawData = [
     logoWidth: 29,
     logoHeight: 30,
     amount: '-$145',
-    title: 'Google Adsense',
-    subtitle: 'Paypal deposit',
+    title: 'Donor A',
+    subtitle: 'Subtitle A',
     logo: '/images/logos/google.png'
   },
   {
     logoWidth: 34,
     logoHeight: 34,
     amount: '-$1870',
-    title: 'Github Enterprise',
+    title: 'Donor B',
     logo: '/images/logos/github.png',
-    subtitle: 'Security & compliance'
+    subtitle: 'Subtitle B'
   },
   {
     logoWidth: 30,
     logoHeight: 30,
     amount: '-$450',
-    title: 'Upgrade Slack Plan',
-    subtitle: 'Debit card deposit',
+    title: 'Donor C',
+    subtitle: 'Subtitle C',
     logo: '/images/logos/slack.png'
   },
   {
     logoWidth: 30,
     logoHeight: 30,
     amount: '-$540',
-    title: 'Digital Ocean',
-    subtitle: 'Cloud Hosting',
+    title: 'Donor D',
+    subtitle: 'Subtitle D',
     logo: '/images/logos/digital-ocean.png'
   },
   {
     logoWidth: 36,
     logoHeight: 21,
     amount: '-$21',
-    title: 'AWS Account',
+    title: 'Donor E',
     logo: '/images/logos/aws.png',
-    subtitle: 'Choosing a Cloud Platform'
+    subtitle: 'Subtitle E'
   }
 ]
 
